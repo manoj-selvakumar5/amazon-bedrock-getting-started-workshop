@@ -1,0 +1,6 @@
+# Python packages for the AIM317 workshop notebooks. Module 0 installs them.
+# boto3 1.43.98 or later is needed for Managed Knowledge Bases and service tiers.
+boto3>=1.43.98
+anthropic
+openai
+aws-bedrock-token-generator
