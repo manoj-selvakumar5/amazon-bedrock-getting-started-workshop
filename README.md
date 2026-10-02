@@ -4,7 +4,7 @@ Hands-on workshop that takes you from your first [Amazon Bedrock](https://aws.am
 API call to a working application in one session. You choose a model, ground it with a Managed
 Knowledge Base, apply Guardrails, pick a service tier, then deploy and monitor what you built.
 
-- Duration: 2 hours
+- Duration: x hours ( will need to confirm)
 - Level: 200 (you know AWS basics and are new to Amazon Bedrock)
 - Format: Jupyter notebooks
 - Region: `us-east-1` or `us-west-2`
