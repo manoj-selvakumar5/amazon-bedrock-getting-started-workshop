@@ -22,9 +22,9 @@ than a set of separate demos. It does two jobs:
 
 | Model | Used for |
 |---|---|
-| Claude Sonnet 5.5 (Anthropic) | Travel chat |
+| Claude Sonnet 5 (Anthropic) | Travel chat |
 | gpt-oss-120b (OpenAI, open-weight) | Expense checks |
-| GPT-6 Luna (OpenAI) | The OpenAI Responses API example in Module 1 |
+| GPT-5.6 Luna (OpenAI) | The OpenAI Responses API example in Module 1 |
 
 ## Modules
 
