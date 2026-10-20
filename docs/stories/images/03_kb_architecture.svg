@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 480" width="1300" height="480" font-family="Arial, Helvetica, sans-serif">
+  <title>Module 3: Managed Knowledge Base and RAG</title>
+  <desc>Policy documents in Amazon S3 are synced into a Managed Knowledge Base. A question is searched with the Retrieve API, and the Converse API writes a grounded answer with citations.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#232F3E"/>
+    </marker>
+  </defs>
+  <rect width="1300" height="480" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="20" y="34" font-size="22" font-weight="bold" fill="#232F3E">Module 3: Managed Knowledge Base and RAG</text>
+  <text x="20" y="54" font-size="12" fill="#232F3E">Managed RAG: sync documents into a managed index, then retrieve and generate grounded, cited answers</text>
+  <line x1="20" y1="64" x2="860" y2="64" stroke="#FF9900" stroke-width="2"/>
+
+  <!-- Source data -->
+  <rect x="30" y="150" width="160" height="100" rx="8" fill="#e9f5e4" stroke="#3F8624" stroke-width="2"/>
+  <text x="110" y="178" text-anchor="middle" font-size="14" font-weight="bold" fill="#232F3E">Source data</text>
+  <text x="110" y="200" text-anchor="middle" font-size="12" fill="#232F3E">Amazon S3 bucket</text>
+  <text x="110" y="218" text-anchor="middle" font-size="12" fill="#232F3E">7 policy documents</text>
+
+  <!-- Managed knowledge base -->
+  <rect x="235" y="90" width="340" height="262" rx="10" fill="#fff8ec" stroke="#FF9900" stroke-width="3"/>
+  <text x="405" y="110" text-anchor="middle" font-size="14" font-weight="bold" fill="#232F3E">Managed Knowledge Base</text>
+  <rect x="270" y="122" width="270" height="40" rx="6" fill="#ffffff" stroke="#232F3E"/>
+  <text x="405" y="147" text-anchor="middle" font-size="13" fill="#232F3E">Sync job: parse and chunk</text>
+  <rect x="270" y="178" width="270" height="40" rx="6" fill="#ffffff" stroke="#232F3E"/>
+  <text x="405" y="203" text-anchor="middle" font-size="13" fill="#232F3E">Managed embeddings</text>
+  <rect x="270" y="234" width="270" height="40" rx="6" fill="#ffffff" stroke="#232F3E"/>
+  <text x="405" y="259" text-anchor="middle" font-size="13" fill="#232F3E">Managed index</text>
+  <rect x="270" y="296" width="270" height="44" rx="6" fill="#e8f1fb" stroke="#146EB4" stroke-width="2"/>
+  <text x="405" y="314" text-anchor="middle" font-size="13" font-weight="bold" fill="#232F3E">Retrieve API</text>
+  <text x="405" y="330" text-anchor="middle" font-size="11" fill="#232F3E">hybrid search and rerank</text>
+  <line x1="405" y1="162" x2="405" y2="176" stroke="#232F3E" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="405" y1="218" x2="405" y2="232" stroke="#232F3E" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="405" y1="274" x2="405" y2="294" stroke="#232F3E" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+
+  <!-- Generation -->
+  <rect x="660" y="260" width="200" height="100" rx="8" fill="#e8f1fb" stroke="#146EB4" stroke-width="2"/>
+  <text x="760" y="288" text-anchor="middle" font-size="14" font-weight="bold" fill="#232F3E">Converse API</text>
+  <text x="760" y="310" text-anchor="middle" font-size="12" fill="#232F3E">Claude Sonnet 5 (chat)</text>
+  <text x="760" y="328" text-anchor="middle" font-size="12" fill="#232F3E">gpt-oss-120b (expense)</text>
+  <text x="760" y="346" text-anchor="middle" font-size="11" fill="#232F3E" font-style="italic">grounded answer</text>
+
+  <!-- You -->
+  <rect x="305" y="395" width="200" height="65" rx="8" fill="#f2f3f3" stroke="#232F3E" stroke-width="2"/>
+  <text x="405" y="422" text-anchor="middle" font-size="14" font-weight="bold" fill="#232F3E">Employee</text>
+  <text x="405" y="441" text-anchor="middle" font-size="12" fill="#232F3E">chat question or expense report</text>
+
+  <!-- Arrows between components -->
+  <line x1="190" y1="200" x2="233" y2="200" stroke="#232F3E" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="405" y1="393" x2="405" y2="354" stroke="#232F3E" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="540" y1="318" x2="658" y2="318" stroke="#232F3E" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="600" y="310" text-anchor="middle" font-size="11" fill="#232F3E">passages</text>
+  <path d="M 760 362 V 427 H 507" fill="none" stroke="#232F3E" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="420" text-anchor="middle" font-size="11" fill="#232F3E">answer + citations</text>
+
+  <!-- Number badges -->
+  <g font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    <circle cx="212" cy="184" r="11" fill="#146EB4"/><text x="212" y="188">1</text>
+    <circle cx="252" cy="198" r="11" fill="#146EB4"/><text x="252" y="202">2</text>
+    <circle cx="383" cy="373" r="11" fill="#146EB4"/><text x="383" y="377">3</text>
+    <circle cx="760" cy="395" r="11" fill="#146EB4"/><text x="760" y="399">4</text>
+  </g>
+
+  <!-- How it works panel -->
+  <rect x="900" y="70" width="380" height="390" rx="6" fill="#eef3fb" stroke="#146EB4"/>
+  <text x="920" y="98" font-size="15" font-weight="bold" fill="#232F3E">How it works</text>
+
+  <circle cx="930" cy="136" r="11" fill="#146EB4"/><text x="930" y="140" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">1</text>
+  <text x="952" y="132" font-size="13" font-weight="bold" fill="#232F3E">Ingest and sync</text>
+  <text x="952" y="150" font-size="12" fill="#232F3E">The sync job reads the policy documents</text>
+  <text x="952" y="166" font-size="12" fill="#232F3E">from S3 and splits them into passages.</text>
+
+  <circle cx="930" cy="212" r="11" fill="#146EB4"/><text x="930" y="216" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">2</text>
+  <text x="952" y="208" font-size="13" font-weight="bold" fill="#232F3E">Embed and index</text>
+  <text x="952" y="226" font-size="12" fill="#232F3E">Each passage becomes a vector in a managed</text>
+  <text x="952" y="242" font-size="12" fill="#232F3E">index. There is no vector database to run.</text>
+
+  <circle cx="930" cy="288" r="11" fill="#146EB4"/><text x="930" y="292" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">3</text>
+  <text x="952" y="284" font-size="13" font-weight="bold" fill="#232F3E">Retrieve</text>
+  <text x="952" y="302" font-size="12" fill="#232F3E">The question is searched by meaning and by</text>
+  <text x="952" y="318" font-size="12" fill="#232F3E">keyword, and the best passages are reranked.</text>
+
+  <circle cx="930" cy="364" r="11" fill="#146EB4"/><text x="930" y="368" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">4</text>
+  <text x="952" y="360" font-size="13" font-weight="bold" fill="#232F3E">Generate</text>
+  <text x="952" y="378" font-size="12" fill="#232F3E">The model answers only from the retrieved</text>
+  <text x="952" y="394" font-size="12" fill="#232F3E">passages, with citations to the source file.</text>
+</svg>
