@@ -19,18 +19,6 @@ Your travel assistant has two jobs, and both have the same gap: neither has read
 | **Travel chat** | In Module 1 it cannot tell an employee the nightly hotel limit in Chicago. | It answers from AnyCompany's policy ($250 in Chicago) and cites the source document. |
 | **Expense checks** | In Module 2 the hand-typed rule ($250 a night everywhere) flags Marcus Chen's $320-a-night New York hotel. | The check retrieves the policy, which allows $325 in New York, and approves the report. |
 
-## Time & cost
-
-Notebook: [TODO: confirm after a full test run]. Ingestion, the longest wait, takes about 2 to 3
-minutes.
-
-> **Cost: read before you start**
->
-> This module creates an S3 bucket, an IAM role, a Managed Knowledge Base and a data source in your
-> account. They stay there until you run
-> [99_cleanup.ipynb](../../notebooks/99_cleanup.ipynb), so run it when you finish the workshop.
-> Model calls and knowledge base usage are billed. See
-> [Amazon Bedrock pricing](https://aws.amazon.com/bedrock/pricing/).
 
 ## Architecture
 
