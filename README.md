@@ -52,7 +52,7 @@ In your own account, you need:
 
 - Python 3.12 or later, and AWS credentials for `us-east-1` or `us-west-2`
 - Access to Claude Sonnet 5, gpt-oss-120b and GPT-5.6 Luna in Amazon Bedrock
-- For the stretch notebook only: Node.js and the AgentCore CLI (`npm install -g @aws/agentcore`),
+- For the stretch notebook only: Node.js and the AgentCore CLI 0.31.1 (`npm install -g @aws/agentcore@0.31.1`),
   and a CDK-bootstrapped account
 
 > **Note:** Module 0 replaces the account's model invocation logging configuration, and the cleanup
