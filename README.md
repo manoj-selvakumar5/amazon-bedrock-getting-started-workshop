@@ -39,14 +39,14 @@ Run the notebooks in order. Each one adds a capability to the assistant.
 | 4 | [Guardrails](notebooks/04_guardrails.ipynb) | Creates a guardrail that masks passport and card numbers, blocks requests to get around the policy, and checks that chat answers are supported by the policy. Attaches it to both tasks. |
 | 5 | [Service tiers](notebooks/05_service_tiers.ipynb) | Runs the expense check on the Priority tier, reads which tier served each request, and explains when to use Standard, Priority and Flex. |
 | 6 | [Deploy and monitor](notebooks/06_deploy_and_monitor.ipynb) | Deploys both tasks as one AWS Lambda function, then reviews invocation logs, CloudWatch metrics by service tier, and cost per feature from request tags. |
+| - | [Stretch: AgentCore](notebooks/stretch_agentcore.ipynb) | Turns the assistant into a Strands agent with two tools and deploys it to Amazon Bedrock AgentCore Runtime with the AgentCore CLI. Optional; do it before Cleanup. |
 | - | [Cleanup](notebooks/99_cleanup.ipynb) | Deletes the knowledge base, guardrail, Lambda function and S3 bucket, and turns off invocation logging. |
-| - | [Stretch: AgentCore](notebooks/stretch_agentcore.ipynb) | Turns the assistant into a Strands agent with two tools and deploys it to Amazon Bedrock AgentCore Runtime with the AgentCore CLI. |
 
 ## Getting started
 
 At an AWS event, your account and environment are set up for you. Open
-`notebooks/00_setup.ipynb` in Jupyter, run it, then work through the notebooks in order. Run
-`99_cleanup.ipynb` at the end.
+`notebooks/00_setup.ipynb` in Jupyter, run it, then work through the notebooks in order. If you do
+the optional stretch notebook, do it after Module 6 and before cleanup. Run `99_cleanup.ipynb` at the end.
 
 In your own account, you need:
 
