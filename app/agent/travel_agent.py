@@ -24,7 +24,7 @@ AGENT_MODEL_ID = "global.anthropic.claude-sonnet-5"
 # gpt-oss-120b checks expenses, as in Modules 2 to 5. It is called in this Region (no prefix).
 EXPENSE_MODEL_ID = "openai.gpt-oss-120b-1:0"
 
-KNOWLEDGE_BASE_NAMES = ["aim317-travel-policy", "aim317-travel-policy-prebuilt"]
+KNOWLEDGE_BASE_NAME = "aim317-travel-policy"
 
 bedrock_agent_runtime = boto3.client("bedrock-agent-runtime", region_name=REGION)
 bedrock_runtime = boto3.client("bedrock-runtime", region_name=REGION)
@@ -36,10 +36,9 @@ def find_knowledge_base_id():
         return os.environ["KNOWLEDGE_BASE_ID"]
     bedrock_agent = boto3.client("bedrock-agent", region_name=REGION)
     summaries = bedrock_agent.list_knowledge_bases(maxResults=100)["knowledgeBaseSummaries"]
-    for name in KNOWLEDGE_BASE_NAMES:
-        for kb in summaries:
-            if kb["name"] == name and kb["status"] == "ACTIVE":
-                return kb["knowledgeBaseId"]
+    for kb in summaries:
+        if kb["name"] == KNOWLEDGE_BASE_NAME and kb["status"] == "ACTIVE":
+            return kb["knowledgeBaseId"]
     raise RuntimeError("No AnyCompany travel policy knowledge base found. Run Module 3 first.")
 
 
