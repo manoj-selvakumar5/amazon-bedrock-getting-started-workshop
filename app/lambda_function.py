@@ -25,7 +25,7 @@ import boto3
 CHAT_MODEL_ID = "global.anthropic.claude-sonnet-5"
 EXPENSE_MODEL_ID = "openai.gpt-oss-120b-1:0"
 
-# Set by CloudFormation at AWS events, or by the Module 6 notebook.
+# Set by the Module 6 notebook.
 KNOWLEDGE_BASE_ID = os.environ["KNOWLEDGE_BASE_ID"]
 GUARDRAIL_ID = os.environ["GUARDRAIL_ID"]
 GUARDRAIL_VERSION = os.environ["GUARDRAIL_VERSION"]
