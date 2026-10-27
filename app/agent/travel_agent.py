@@ -2,7 +2,8 @@
 
 The same two capabilities as the Lambda version, turned into tools: search_policy answers
 questions from the travel policy, and check_expense checks expense items against it. The model
-decides which tools to call, and in what order.
+decides which tools to call, and in what order. Unlike the Lambda version, it applies no
+guardrail and runs on the Standard tier.
 
 Used two ways: imported by the stretch notebook to run the agent locally, and deployed to
 Amazon Bedrock AgentCore Runtime by main.py.
