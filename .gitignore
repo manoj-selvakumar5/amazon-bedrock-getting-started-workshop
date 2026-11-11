@@ -9,6 +9,7 @@ env/
 
 # Environment and credentials
 .env
+AWS Credentials*
 .aws-sam/
 
 # IDEs
