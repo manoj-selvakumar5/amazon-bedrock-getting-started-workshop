@@ -67,7 +67,6 @@ In your own account, you need:
 | `data/` | AnyCompany's travel policy and sample expense reports |
 | `app/lambda_function.py` | The deployed assistant (Module 6) |
 | `app/agent/` | The agent version (stretch notebook) |
-| `infra/` | CloudFormation for resources set up in event accounts (not yet written) |
 | `requirements.txt` | Python packages, installed by Module 0 |
 
 ## Sample data
