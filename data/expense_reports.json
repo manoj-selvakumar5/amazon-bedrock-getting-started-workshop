@@ -73,7 +73,7 @@
       },
       {
         "type": "meals",
-        "description": "Meals for 1 day, including team dinner",
+        "description": "Meals for 1 day, including own share of team dinner",
         "amount": 95.0
       }
     ],
